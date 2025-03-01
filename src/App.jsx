@@ -109,21 +109,21 @@ function App() {
             </div>
           </div>
           <div className="col-lg-3 col-md-6 col-sm-12">
-          <div className="smbox dfjcac p-0">
+            <div className="smbox dfjcac p-0">
               <img src="/static/images/logo.jpeg" alt="logo" height='100' />
               <h4 className="text-center">10+ Year</h4>
               <p className='text-center'>Digital Marketing</p>
             </div>
           </div>
           <div className="col-lg-3 col-md-6 col-sm-12">
-          <div className="smbox dfjcac p-0">
+            <div className="smbox dfjcac p-0">
               <img src="/static/images/logo.jpeg" alt="logo" height='100' />
               <h4 className="text-center">10+ Year</h4>
               <p className='text-center'>Digital Marketing</p>
             </div>
           </div>
           <div className="col-lg-3 col-md-6 col-sm-12">
-          <div className="smbox dfjcac p-0">
+            <div className="smbox dfjcac p-0">
               <img src="/static/images/logo.jpeg" alt="logo" height='100' />
               <h4 className="text-center">10+ Year</h4>
               <p className='text-center'>Digital Marketing</p>
@@ -140,6 +140,63 @@ function App() {
           <div className="col-md-5 dfjcac">
             <button className='butn ps-4 pe-4'><h4>Button</h4></button>
 
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-4 mb-4">
+        <h2 className="text-center">Our Digital Marketing Services</h2>
+        <p className="text-center mt-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa corrupti vitae, temporibus, voluptatum, ipsum a officiis quas minima natus quis quod labore quidem? Sapiente magni odit similique reprehenderit libero aspernatur?</p>
+      </div>
+      <div className="container">
+        <div className="row">
+          <div className="col-md-7">
+            <div className="content-container">
+              <div className="sidelogo d-flex flex-column align-items-center">
+                <img src="/static/images/logo.jpeg" alt="logo" height='90' />
+                <div className='line'></div>
+              </div>
+              <div className='content'>
+                <h4 className='mb-2'>Plan</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nam possimus reprehenderit. Similique veniam autem aspernatur? At, autem. Similique debitis ut iusto nihil totam minima architecto incidunt ipsam quidem magnam!</p>
+              </div>
+            </div>
+
+            <div className="content-container">
+              <div className="sidelogo d-flex flex-column align-items-center">
+                <img src="/static/images/logo.jpeg" alt="logo" height='90' />
+                <div className='line'></div>
+              </div>
+              <div className='content'>
+                <h4 className='mb-2'>Plan</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nam possimus reprehenderit. Similique veniam autem aspernatur? At, autem. Similique debitis ut iusto nihil totam minima architecto incidunt ipsam quidem magnam!</p>
+              </div>
+            </div>
+
+            <div className="content-container">
+              <div className="sidelogo d-flex flex-column align-items-center">
+                <img src="/static/images/logo.jpeg" alt="logo" height='90' />
+                <div className='line'></div>
+              </div>
+              <div className='content'>
+                <h4 className='mb-2'>Plan</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nam possimus reprehenderit. Similique veniam autem aspernatur? At, autem. Similique debitis ut iusto nihil totam minima architecto incidunt ipsam quidem magnam!</p>
+              </div>
+            </div>
+
+            <div className="content-container">
+              <div className="sidelogo d-flex flex-column align-items-center">
+                <img src="/static/images/logo.jpeg" alt="logo" height='90' />
+                {/* <div className='line'></div> */}
+              </div>
+              <div className='content'>
+                <h4 className='mb-2'>Plan</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nam possimus reprehenderit. Similique veniam autem aspernatur? At, autem. Similique debitis ut iusto nihil totam minima architecto incidunt ipsam quidem magnam!</p>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-5 dfjcac">
+            <img src="/static/images/demo.jpeg" alt="" height='300' />
           </div>
         </div>
       </div>
