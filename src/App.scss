@@ -67,7 +67,14 @@ height:inherit !important;
 border: 1px solid rgb(2, 2, 82);
 border-radius: 25px;
 }
-
+.borderbox2{
+  border: 1px solid rgb(2, 2, 82);
+  border-radius: 20px;
+  transition: 0.3s;
+}
+.borderbox2:hover{
+  box-shadow: 0 0 10px 8px rgb(207, 207, 207);
+}
 .smbox{
   border: 1px solid rgb(193, 193, 193);
   border-radius: 8px;
@@ -90,4 +97,24 @@ border-radius: 25px;
   background-color: rgb(203, 203, 203);
   height:100%;
   margin-top: -9px;
+}
+.bg-theme{
+  background-color:rgb(28, 28, 103) ;
+  color: white;
+}
+.slider{
+  pad: 0 4vw;
+  height: auto !important;
+  background-color: rgb(28, 28, 103) ;
+  width: 100%;
+}
+.awssld__content{
+  background-color: rgb(28, 28, 103) !important;
+}
+.feedback{
+padding: 1vw 20vw !important;
+justify-content: center;
+}
+.row2{
+  padding: 1vw 10vw;
 }
