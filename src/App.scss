@@ -1,0 +1,79 @@
+h1,h2,h3,h4,h5{
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+.container{
+  max-width: 100% !important;
+}
+/* ------------navbar css */
+.navbar{
+  background-color: #ffffff;
+  box-shadow: 0 0 5px 2px gray;
+  a{
+    color: rgb(28, 28, 103) !important;
+    font-size: 1.2rem111;
+  }
+}
+
+.dropdown-menu a{
+  color: black !important;
+}
+
+// ------------home page-----------
+.homecontact{
+  height: auto !important;
+  width: 100vw !important;
+  color: white;
+  background-color: rgb(28, 28, 103);
+}
+
+.butn{
+  padding: 5px;
+  border-radius: 50px;
+  background-color: white;
+  border: 3px solid rgb(28, 28, 103);
+  max-width: 200px;
+}
+
+.butn2{
+  padding: 5px;
+  border-radius: 50px;
+  color: white;
+  border: 3px solid rgb(28, 28, 103);
+  max-width: 200px;
+  background-color:rgb(28, 28, 103) ;
+  margin-top: 20px;
+  transition: 0.5s;
+}
+.butn2:hover{
+  background-color: white;
+  color:rgb(28, 28, 103) ;
+}
+.dfjcac{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding:0 4vw !important;
+}
+.tac{
+  text-align: center !important;
+}
+.parentheight{
+height:inherit !important;
+}
+
+.borderbox:hover{
+border: 1px solid rgb(2, 2, 82);
+border-radius: 25px;
+}
+
+.smbox{
+  border: 1px solid rgb(193, 193, 193);
+  border-radius: 8px;
+  margin: 15px 0;
+  transition: 0.5s;
+}
+.smbox:hover{
+  box-shadow: 0 0 18px 3px rgb(28, 28, 103);
+}
