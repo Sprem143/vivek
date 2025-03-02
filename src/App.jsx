@@ -302,41 +302,7 @@ function App() {
         </div>
       </div>
       {/* -----------client feedback----------- */}
-      {/* <div className="p-3 mt-4 bg-theme">
-        <h3 className="text-center">Client Speak</h3>
-        <div>
-          <AwesomeSlider>
-            <div className='slider dfjcac p-4'>
-              <h1 >"</h1>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto dolorum quam reiciendis magnam error neque consequatur illo itaque perferendis fuga esse possimus quas deleniti sint, cumque ullam tempore! Sit, dicta.</p>
-              <hr />
-              <h5>Name</h5>
-              <b>Occupation</b>
-            </div>
-            <div className='slider dfjcac p-4'>
-              <h1 >"</h1>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto dolorum quam reiciendis magnam error neque consequatur illo itaque perferendis fuga esse possimus quas deleniti sint, cumque ullam tempore! Sit, dicta.</p>
-              <hr />
-              <h5>Name</h5>
-              <b>Occupation</b>
-            </div>
-            <div className='slider dfjcac p-4'>
-              <h1 >"</h1>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto dolorum quam reiciendis magnam error neque consequatur illo itaque perferendis fuga esse possimus quas deleniti sint, cumque ullam tempore! Sit, dicta.</p>
-              <hr />
-              <h5>Name</h5>
-              <b>Occupation</b>
-            </div>
-            <div className='slider dfjcac p-4'>
-              <h1 >"</h1>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto dolorum quam reiciendis magnam error neque consequatur illo itaque perferendis fuga esse possimus quas deleniti sint, cumque ullam tempore! Sit, dicta.</p>
-              <hr />
-              <h5>Name</h5>
-              <b>Occupation</b>
-            </div>
-          </AwesomeSlider>
-        </div>
-      </div> */}
+     
       <div className="container bg-theme p-4">
         <h3 className="text-center mb-4">Client Feedback</h3>
 

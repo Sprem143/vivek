@@ -19,29 +19,33 @@ export default function Header() {
                             style={{ maxHeight: '100px' }}
                             navbarScroll
                         >
-                            <Nav.Link href="#action1">Home</Nav.Link>
-                            <Nav.Link href="#action2">Link</Nav.Link>
-                            <NavDropdown title="Link" id="navbarScrollingDropdown">
-                                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                                <NavDropdown.Item href="#action4" >
-                                    Another action
+                            <Nav.Link href="/">Home</Nav.Link>
+                            <NavDropdown title="Our Services" id="navbarScrollingDropdown">
+                                <NavDropdown.Item href="/seo">SEO</NavDropdown.Item>
+                                <NavDropdown.Item href="/website-designing" >
+                                    Website Desigining
                                 </NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="#action5">
-                                    Something else here
+                                
+                                <NavDropdown.Item href="/google-ads">
+                                    Google Ads
+                                </NavDropdown.Item>
+                                <NavDropdown.Item href="/instagram-ads">
+                                    Instagram Ads
+                                </NavDropdown.Item>
+
+                                <NavDropdown.Item href="/facebook-ads">
+                                    Facebook Ads
                                 </NavDropdown.Item>
                             </NavDropdown>
-                            <Nav.Link href="#" disabled>
-                                Link
+                           
+                            <Nav.Link href="/contact" >
+                                Contact
                             </Nav.Link>
-                            <Nav.Link href="#" disabled>
-                               Contact
-                            </Nav.Link>
-                            <Nav.Link href="#" disabled>
-                              Terms & Conditions
+                            <Nav.Link href="/terms-conditions" >
+                                Terms & Conditions
                             </Nav.Link>
                         </Nav>
-                       
+
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
