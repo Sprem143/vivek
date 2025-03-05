@@ -130,3 +130,21 @@ justify-content: center;
 .row2{
   padding: 1vw 10vw;
 }
+.top{
+  height: 30px;
+  width: 100%;
+  background-color: rgb(28, 28, 103) ;
+}
+.footer{
+  margin-top: 20px;
+  background-color: rgb(28, 28, 103);
+  padding: 2vw 5vw;
+  color: white;
+  a{
+    color: white;
+    text-decoration: none;
+  }
+  ul{
+    list-style: none;
+  }
+}

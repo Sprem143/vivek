@@ -10,6 +10,7 @@ import Google from './components/Google.jsx';
 import Website from './components/Website.jsx';
 import Contact from './components/Contact.jsx';
 import Termcondition from './components/Termcondition.jsx';
+import Footer from './components/Footer.jsx';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -29,5 +30,6 @@ createRoot(document.getElementById('root')).render(
         <Route path='/terms-conditions' element={<Termcondition />} />
        
       </Routes>
+      <Footer/>
     </BrowserRouter>
 )
