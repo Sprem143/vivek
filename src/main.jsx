@@ -11,25 +11,29 @@ import Website from './components/Website.jsx';
 import Contact from './components/Contact.jsx';
 import Termcondition from './components/Termcondition.jsx';
 import Footer from './components/Footer.jsx';
+import Admin from './Admin.jsx';
+import Login from './Login.jsx';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 createRoot(document.getElementById('root')).render(
 
-   
-    <BrowserRouter>
-    <Header/>
-      <Routes>
-        <Route path='/' element={<App />} />
-        <Route path='/seo' element={<SEO />} />
-        <Route path='/facebook-ads' element={<Facebook />} />
-        <Route path='/instagram-ads' element={<Instagram />} />
-        <Route path='/google-ads' element={<Google />} />
-        <Route path='/website-designing' element={<Website />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/terms-conditions' element={<Termcondition />} />
-       
-      </Routes>
-      <Footer/>
-    </BrowserRouter>
+
+  <BrowserRouter>
+    <Header />
+    <Routes>
+      <Route path='/' element={<App />} />
+      <Route path='/seo' element={<SEO />} />
+      <Route path='/login' element={<Login />} />
+      <Route path='/admin' element={<Admin />} />
+      <Route path='/facebook-ads' element={<Facebook />} />
+      <Route path='/instagram-ads' element={<Instagram />} />
+      <Route path='/google-ads' element={<Google />} />
+      <Route path='/website-designing' element={<Website />} />
+      <Route path='/contact' element={<Contact />} />
+      <Route path='/terms-conditions' element={<Termcondition />} />
+
+    </Routes>
+    <Footer />
+  </BrowserRouter>
 )

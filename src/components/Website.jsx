@@ -126,8 +126,8 @@ function Website() {
                     </div>
                 </div>
             </div>
-             {/* -------client feedback */}
-             <div className="container p-4">
+            {/* -------client feedback */}
+            <div className="container p-4">
                 <h3 className="text-center mb-4">Our Happy Customers</h3>
 
                 <Slider {...settings}>
@@ -137,7 +137,7 @@ function Website() {
                         </div>
                         <div className="feedback dfjcac">
                             <h5 className="text-center">Name</h5>
-                            <b cl>Occupation</b>
+                            <b >Occupation</b>
                             <p>
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla accusamus dolores repudiandae voluptatum sunt libero illum rem autem, officia nam doloribus minima, cum, iure accusantium deleniti architecto quam est qui.
                             </p>
@@ -150,7 +150,7 @@ function Website() {
                         </div>
                         <div className="feedback dfjcac">
                             <h5 className="text-center">Name</h5>
-                            <b cl>Occupation</b>
+                            <b >Occupation</b>
                             <p>
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla accusamus dolores repudiandae voluptatum sunt libero illum rem autem, officia nam doloribus minima, cum, iure accusantium deleniti architecto quam est qui.
                             </p>
@@ -163,7 +163,7 @@ function Website() {
                         </div>
                         <div className="feedback dfjcac">
                             <h5 className="text-center">Name</h5>
-                            <b cl>Occupation</b>
+                            <b >Occupation</b>
                             <p>
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla accusamus dolores repudiandae voluptatum sunt libero illum rem autem, officia nam doloribus minima, cum, iure accusantium deleniti architecto quam est qui.
                             </p>
@@ -176,7 +176,7 @@ function Website() {
                         </div>
                         <div className="feedback dfjcac">
                             <h5 className="text-center">Name</h5>
-                            <b cl>Occupation</b>
+                            <b >Occupation</b>
                             <p>
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla accusamus dolores repudiandae voluptatum sunt libero illum rem autem, officia nam doloribus minima, cum, iure accusantium deleniti architecto quam est qui.
                             </p>
@@ -189,7 +189,7 @@ function Website() {
                         </div>
                         <div className="feedback dfjcac">
                             <h5 className="text-center">Name</h5>
-                            <b cl>Occupation</b>
+                            <b >Occupation</b>
                             <p>
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla accusamus dolores repudiandae voluptatum sunt libero illum rem autem, officia nam doloribus minima, cum, iure accusantium deleniti architecto quam est qui.
                             </p>
@@ -202,7 +202,7 @@ function Website() {
                         </div>
                         <div className="feedback dfjcac">
                             <h5 className="text-center">Name</h5>
-                            <b cl>Occupation</b>
+                            <b >Occupation</b>
                             <p>
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla accusamus dolores repudiandae voluptatum sunt libero illum rem autem, officia nam doloribus minima, cum, iure accusantium deleniti architecto quam est qui.
                             </p>
@@ -274,88 +274,88 @@ function Website() {
             </div>
 
             <div className="container">
-        <h3 className='text-center mt-4 mb-4'>Recent Blog Posts        </h3>
-        <div className="row ">
-          <div className="col-md-4 pt-2 dfjcac">
-            <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src="/static/images/demo.jpeg" />
-              <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up the
-                  bulk of the card's content.
-                </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
-              </Card.Body>
-            </Card>
-          </div>
+                <h3 className='text-center mt-4 mb-4'>Recent Blog Posts        </h3>
+                <div className="row ">
+                    <div className="col-md-4 pt-2 dfjcac">
+                        <Card style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src="/static/images/demo.jpeg" />
+                            <Card.Body>
+                                <Card.Title>Card Title</Card.Title>
+                                <Card.Text>
+                                    Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.
+                                </Card.Text>
+                                <Button variant="primary">Go somewhere</Button>
+                            </Card.Body>
+                        </Card>
+                    </div>
 
-          <div className="col-md-4 p-2 dfjcac">
-            <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src="/static/images/demo.jpeg" />
-              <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up the
-                  bulk of the card's content.
-                </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
-              </Card.Body>
-            </Card>
-          </div>
+                    <div className="col-md-4 p-2 dfjcac">
+                        <Card style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src="/static/images/demo.jpeg" />
+                            <Card.Body>
+                                <Card.Title>Card Title</Card.Title>
+                                <Card.Text>
+                                    Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.
+                                </Card.Text>
+                                <Button variant="primary">Go somewhere</Button>
+                            </Card.Body>
+                        </Card>
+                    </div>
 
-          <div className="col-md-4 p-2 dfjcac">
-            <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src="/static/images/demo.jpeg" />
-              <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up the
-                  bulk of the card's content.
-                </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
-              </Card.Body>
-            </Card>
-          </div>
-        </div>
-      </div>
+                    <div className="col-md-4 p-2 dfjcac">
+                        <Card style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src="/static/images/demo.jpeg" />
+                            <Card.Body>
+                                <Card.Title>Card Title</Card.Title>
+                                <Card.Text>
+                                    Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.
+                                </Card.Text>
+                                <Button variant="primary">Go somewhere</Button>
+                            </Card.Body>
+                        </Card>
+                    </div>
+                </div>
+            </div>
 
-      <div className="container mt-4 mb-4">
-        <h3 className="text-center">Contact Form</h3>
-        <p className="text-center mt-3 fs-4">Want to get in touch? We'd love to hear from you. Just fill in the form below.</p>
-        <div className="row row2 dfjcac flex-row mt-4">
-          <div className="col-md-3">
+            <div className="container mt-4 mb-4">
+                <h3 className="text-center">Contact Form</h3>
+                <p className="text-center mt-3 fs-4">Want to get in touch? We'd love to hear from you. Just fill in the form below.</p>
+                <div className="row row2 dfjcac flex-row mt-4">
+                    <div className="col-md-3">
 
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control type="email" placeholder="" />
-            </Form.Group>
+                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                            <Form.Label>Email address</Form.Label>
+                            <Form.Control type="email" placeholder="" />
+                        </Form.Group>
 
-          </div>
-          <div className="col-md-3">
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control type="email" placeholder="" />
-            </Form.Group>
-          </div>
-          <div className="col-md-3">
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control type="email" placeholder="" />
-            </Form.Group>
-          </div>
-          <div className="col-md-9">
-            <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-              <Form.Label>Example textarea</Form.Label>
-              <Form.Control as="textarea" rows={5} />
-            </Form.Group>
-          </div>
-         
-        </div>
-       <div className="w-100 d-flex justify-content-center">
-       <button className='butn2 ps-4 pe-4 pt-2 pb-2'>Button</button>
-       </div>
-      </div>
+                    </div>
+                    <div className="col-md-3">
+                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                            <Form.Label>Email address</Form.Label>
+                            <Form.Control type="email" placeholder="" />
+                        </Form.Group>
+                    </div>
+                    <div className="col-md-3">
+                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                            <Form.Label>Email address</Form.Label>
+                            <Form.Control type="email" placeholder="" />
+                        </Form.Group>
+                    </div>
+                    <div className="col-md-9">
+                        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                            <Form.Label>Example textarea</Form.Label>
+                            <Form.Control as="textarea" rows={5} />
+                        </Form.Group>
+                    </div>
+
+                </div>
+                <div className="w-100 d-flex justify-content-center">
+                    <button className='butn2 ps-4 pe-4 pt-2 pb-2'>Button</button>
+                </div>
+            </div>
         </>
     )
 }

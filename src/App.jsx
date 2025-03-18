@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import 'react-awesome-slider/dist/styles.css';
 import Slider from "react-slick";
 import './App.scss'
@@ -7,8 +7,79 @@ import "slick-carousel/slick/slick-theme.css";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
+import { useNavigate } from 'react-router-dom';
+import Modal from 'react-bootstrap/Modal';
 
 function App() {
+
+  const navigate = useNavigate()
+  useEffect(() => {
+    getcontent()
+    getprofile()
+  }, [])
+  const [id, setId] = useState('')
+  const [newheading, setNewheading] = useState('')
+  const [show, setShow] = useState(false);
+  const handleClose = () => {
+    heading[id] = newheading
+    setHeading(heading);
+    setShow(false);
+   islogin? changeheading(): null
+  }
+  const handleShow = (id) => {
+   if(islogin){
+    setId(id)
+    setShow(true)
+   }
+  }
+
+  const [profile, setProfile] = useState({});
+  const [islogin, setLogin] = useState(false)
+  const [heading, setHeading] = useState({hphd1:'heading1',hphd2:'heading2',hphd3:'heading3',hphd4:'heading4', hphd5:'heading5',hphd6:'heading6', hphd7:'heading7'})
+  const local = 'http://localhost:10000'
+  const api = 'https://vivek-backend.onrender.com'
+
+  const getprofile = async () => {
+    let token = localStorage.getItem('admin_token');
+    if (token) {
+      try {
+        let admin = await fetch(`${api}/getprofile`, {
+          method: 'GET',
+          headers: { 'Authorization': `Bearer ${token}` }
+        });
+        admin = await admin.json();
+        if (admin.admin.mobile !== undefined) {
+          setLogin(true)
+          setProfile(admin.admin);
+        }
+      } catch (err) {
+        console.log(err)
+      }
+    }
+  }
+  const [contentid, setContentId]=useState('')
+  const getcontent = async()=>{
+    let res = await fetch(`${api}/getcontent`,{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({page:'home'})
+    })
+    res = await res.json();
+    setHeading(res.data.heading)
+    setContentId(res.data._id)
+  }
+
+  const changeheading = async () => {
+    let res = await fetch(`${api}/changeheading`,{
+      method:'PUT',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({heading,contentid})
+    })
+    res= await res.json()
+    console.log(res)
+  }
+
+
   var settings = {
     dots: true,
     infinite: true,
@@ -20,10 +91,27 @@ function App() {
   };
   return (
     <>
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Enter new Heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <textarea cols={55} className='p-2' onChange={(e) => setNewheading(e.target.value)}></textarea>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
       <div className="container p-4 m-0 homecontact">
         <div className="row p-0 m-0 parentheight">
           <div className="col-lg-8 col-md-6 pe-4 d-flex flex-column justify-content-center parentheight" >
-            <h4>heading 001</h4>
+            <h4 onDoubleClick={() => handleShow('hphd1')}>{heading.hphd1}</h4>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates magni deleniti facilis? Repellendus doloremque molestiae et asperiores dolorum excepturi debitis dolor inventore, possimus, veritatis sequi quos enim harum ut dolore.</p>
             <button className='butn'>Button</button>
 
@@ -47,7 +135,7 @@ function App() {
       <div className="container p-3">
         <div className="row">
           <div className="col-md-6 p-4 d-flex flex-column justify-content-center">
-            <h2>About Company</h2>
+            <h2 onDoubleClick={() => handleShow('hphd2')}>{heading.hphd2}</h2>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit veniam sequi corporis officia id minus blanditiis architecto quam labore explicabo dicta enim ullam molestias, quasi odio voluptates necessitatibus eum sint. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus libero facere nihil voluptates nesciunt quisquam minus sunt eligendi? Iste ullam nihil quo veniam ut sed laborum ad explicabo natus maiores! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente fugit debitis inventore quasi quos dicta consequuntur minus incidunt ab, accusamus dolore est assumenda. Dolore illo, nihil repellat inventore a cupiditate.
             <button className='butn2'>Button</button>
           </div>
@@ -68,7 +156,7 @@ function App() {
         </div>
       </div>
       <div className="mt-4 mb-4">
-        <h2 className="text-center">Our Digital Marketing Services</h2>
+        <h2 className="text-center" onDoubleClick={() => handleShow('hphd3')}>{heading.hphd3}</h2>
       </div>
 
       <div className="container">
@@ -108,7 +196,7 @@ function App() {
       </div>
 
       <div className="mt-4 mb-4">
-        <h2 className="text-center">Our Digital Marketing Services</h2>
+        <h2 className="text-center" onDoubleClick={() => handleShow('hphd4')}>{heading.hphd4}</h2>
       </div>
 
       <div className="container">
@@ -157,7 +245,7 @@ function App() {
       </div>
 
       <div className="mt-4 mb-4">
-        <h2 className="text-center">Our Digital Marketing Services</h2>
+        <h2 className="text-center" onDoubleClick={() => handleShow('hphd5')}>{heading.hphd5}</h2>
         <p className="text-center mt-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa corrupti vitae, temporibus, voluptatum, ipsum a officiis quas minima natus quis quod labore quidem? Sapiente magni odit similique reprehenderit libero aspernatur?</p>
       </div>
       <div className="container">
@@ -216,7 +304,7 @@ function App() {
       <div className="container p-3 bg-theme">
         <div className="row">
           <div className="col-md-6 p-4 d-flex flex-column justify-content-center">
-            <h2 className='ps-4'>About Company</h2>
+            <h2 className='ps-4' onDoubleClick={() => handleShow('hphd6')}>{heading.hphd6}</h2>
             <p className='ps-4 mt-3'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit veniam sequi corporis officia id minus blanditiis architecto quam labore explicabo dicta enim ullam molestias, quasi odio voluptates necessitatibus eum sint. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus libero facere nihil voluptates nesciunt quisquam minus sunt eligendi? Iste ullam nihil quo veniam ut sed laborum ad explicabo natus maiores! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente fugit debitis inventore quasi quos dicta consequuntur minus incidunt ab, accusamus dolore est assumenda. Dolore illo, nihil repellat inventore a cupiditate.
             </p>
@@ -229,7 +317,7 @@ function App() {
       </div>
 
       <div className="mt-4 mb-4">
-        <h2 className="text-center">Our Digital Marketing Services</h2>
+        <h2 className="text-center" onDoubleClick={() => handleShow('hphd7')}>{heading.hphd7}</h2>
         <p className="text-center mt-3 ps-4 pe-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa corrupti vitae, temporibus, voluptatum, ipsum a officiis quas minima natus quis quod labore quidem? Sapiente magni odit similique reprehenderit libero aspernatur?</p>
       </div>
 
@@ -302,7 +390,7 @@ function App() {
         </div>
       </div>
       {/* -----------client feedback----------- */}
-     
+
       <div className="container bg-theme p-4">
         <h3 className="text-center mb-4">Client Feedback</h3>
 
@@ -314,7 +402,7 @@ function App() {
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla accusamus dolores repudiandae voluptatum sunt libero illum rem autem, officia nam doloribus minima, cum, iure accusantium deleniti architecto quam est qui.
               </p>
               <h5 className="text-center">Name</h5>
-              <p cl>Occupation</p>
+              <p>Occupation</p>
             </div>
           </div>
           <div className='dfjcac'>
@@ -324,7 +412,7 @@ function App() {
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla accusamus dolores repudiandae voluptatum sunt libero illum rem autem, officia nam doloribus minima, cum, iure accusantium deleniti architecto quam est qui.
               </p>
               <h5 className="text-center">Name</h5>
-              <p cl>Occupation</p>
+              <p >Occupation</p>
             </div>
           </div>
           <div className='dfjcac'>
@@ -334,7 +422,7 @@ function App() {
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla accusamus dolores repudiandae voluptatum sunt libero illum rem autem, officia nam doloribus minima, cum, iure accusantium deleniti architecto quam est qui.
               </p>
               <h5 className="text-center">Name</h5>
-              <p cl>Occupation</p>
+              <p >Occupation</p>
             </div>
           </div>
           <div className='dfjcac'>
@@ -344,7 +432,7 @@ function App() {
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla accusamus dolores repudiandae voluptatum sunt libero illum rem autem, officia nam doloribus minima, cum, iure accusantium deleniti architecto quam est qui.
               </p>
               <h5 className="text-center">Name</h5>
-              <p cl>Occupation</p>
+              <p >Occupation</p>
             </div>
           </div>
           <div className='dfjcac'>
@@ -354,7 +442,7 @@ function App() {
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla accusamus dolores repudiandae voluptatum sunt libero illum rem autem, officia nam doloribus minima, cum, iure accusantium deleniti architecto quam est qui.
               </p>
               <h5 className="text-center">Name</h5>
-              <p cl>Occupation</p>
+              <p>Occupation</p>
             </div>
           </div>
           <div className='dfjcac'>
@@ -364,7 +452,7 @@ function App() {
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla accusamus dolores repudiandae voluptatum sunt libero illum rem autem, officia nam doloribus minima, cum, iure accusantium deleniti architecto quam est qui.
               </p>
               <h5 className="text-center">Name</h5>
-              <p cl>Occupation</p>
+              <p >Occupation</p>
             </div>
           </div>
         </Slider>
@@ -448,11 +536,11 @@ function App() {
               <Form.Control as="textarea" rows={5} />
             </Form.Group>
           </div>
-         
+
         </div>
-       <div className="w-100 d-flex justify-content-center">
-       <button className='butn2 ps-4 pe-4 pt-2 pb-2'>Button</button>
-       </div>
+        <div className="w-100 d-flex justify-content-center">
+          <button className='butn2 ps-4 pe-4 pt-2 pb-2'>Button</button>
+        </div>
       </div>
     </>
   )
